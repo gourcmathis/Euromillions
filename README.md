@@ -18,7 +18,7 @@ pip install pandas
 
 pip install scikit-learn
 
-se placer dans le main et lancer un serveur local :
+se placer dans le dossier app et lancer un serveur local :
 
 uvicorn main:app --reload
 
