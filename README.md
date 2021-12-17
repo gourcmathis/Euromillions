@@ -40,6 +40,11 @@ Nous avions initialement décidé de choisir comme variable cible pour nos modè
 
 Nous avons généré pour chaque tirage gagnant de nos données 4 tirages perdants composés d'entiers aléatoires dont au moins un est différent de la grille gagnante. Nous avons ainsi un jeu de données composé de 80% de tirages perdants pour 20% de tirages gagnants. Nous avons ensuite entrainé un modèle de forêt aléatoire sur un jeu d'apprentissage composé de 75% des données. Nous avons choisi le modèle de RandomForest grâce à sa grande robustesse et simplicité de paramétrisation. Un test rapide avec d'autres modèles a donné un résultat inférieur. Le nombre d'estimateurs de la forêt aléatoire a été fixé à 1000 pour une meilleure qualité de modèle.
 
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
 ### Résultats
 
 La matrice de confusion de notre modèle est comme suit :
