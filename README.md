@@ -42,5 +42,6 @@ Nous avons généré pour chaque tirage gagnant de nos données 4 tirages perdan
 
 ### Résultats
 
+![Model Classification Report](model.png)
 
 Les tirages étant aléatoires et indépendants, il devrait être impossible de fournir un modèle de prédiction pour gagner à l'Euro Millions. Cepandant, nous atteignons un rappel de 0.22 au lieu de 0 si les tirages étaient réellement aléatoires et indépendants. Ainsi, même si notre précision n'est pas idéale, nous avons mis en évidence que les tirages gagnants sont en partie prévisibles.
