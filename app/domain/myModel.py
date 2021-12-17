@@ -38,20 +38,51 @@ def randomNotN(n: int, maximum: int) -> int:
         r = np.random.randint(1, maximum+1)
     return r
 
+def randomLosingGrid(grid):
+    """generates a grid with at least one number different from a winning grid
+
+    Args:
+        grid (Any): an arg
+
+    Returns:
+        Dict[str,Any]: The return value
+    """
+    newgrid = {
+        "N1": np.random.randint(1, 51),
+        "N2": np.random.randint(1, 51),
+        "N3": np.random.randint(1, 51),
+        "N4": np.random.randint(1, 51),
+        "N5": np.random.randint(1, 51),
+        "E1": np.random.randint(1, 13),
+        "E2": np.random.randint(1, 13),
+        "Win": 0
+    }
+    while newgrid == grid:
+        newgrid = {
+            "N1": np.random.randint(1, 51),
+            "N2": np.random.randint(1, 51),
+            "N3": np.random.randint(1, 51),
+            "N4": np.random.randint(1, 51),
+            "N5": np.random.randint(1, 51),
+            "E1": np.random.randint(1, 13),
+            "E2": np.random.randint(1, 13),
+            "Win": 0
+        }
+    return newgrid
 
 newdata = []
 for i in dict["Date"]:
     for i in range(4):
-        newdata.append({
-            "N1": randomNotN(dict["N1"][i], 50),
-            "N2": randomNotN(dict["N2"][i], 50),
-            "N3": randomNotN(dict["N3"][i], 50),
-            "N4": randomNotN(dict["N4"][i], 50),
-            "N5": randomNotN(dict["N5"][i], 50),
-            "E1": randomNotN(dict["E1"][i], 12),
-            "E2": randomNotN(dict["E2"][i], 12),
+        newdata.append(randomLosingGrid({
+            "N1": dict["N1"][i],
+            "N2": dict["N2"][i],
+            "N3": dict["N3"][i],
+            "N4": dict["N4"][i],
+            "N5": dict["N5"][i],
+            "E1": dict["E1"][i],
+            "E2": dict["E2"][i],
             "Win": 0
-        })
+        }))
 newdata = pd.DataFrame(newdata)
 data["Win"] = 1
 inputData = pd.concat([newdata, data[["N1", "N2", "N3", "N4", "N5", "E1", "E2", "Win"]]], ignore_index=True)
