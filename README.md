@@ -13,7 +13,9 @@ Créer et se placer dans son environnement virtuel
 installer :
 
 pip install "fastapi[all]"
+
 pip install pandas
+
 pip install scikit-learn
 
 se placer dans le main et lancer un serveur local :
