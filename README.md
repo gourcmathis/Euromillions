@@ -43,7 +43,7 @@ Nous avons généré pour chaque tirage gagnant de nos données 4 tirages perdan
 ### Résultats
 
 La matrice de confusion de notre modèle est comme suit :
-[1302   15] 0.99
-[ 257   74] 0.22
- 0.84 0.83
+| 1302 | 15 | 0.99 |
+| 257 | 74 | 0.22 |
+| 0.84 | 0.83 |
 Les tirages étant aléatoires et indépendants, il devrait être impossible de fournir un modèle de prédiction pour gagner à l'Euro Millions. Cepandant, nous atteignons un rappel de 0.22 au lieu de 0 si les tirages étaient réellement aléatoires et indépendants. Ainsi, même si notre précision n'est pas idéale, nous avons mis en évidence que les tirages gagnants sont en partie prévisibles.
